@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+    <style>
+        table,tr,td,th{
+            border-color: rgb(235, 101, 123);
+            border-style:outset;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Table</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Date of Exam</th>
+            <th>m1</th>
+            <th>m2</th>
+            <th>m3</th>
+        </tr>
+        <% data.forEach(entry => { %>
+            <% 
+                const showRow=entry.m1>90;
+            %>
+            <% if(showRow){%>
+            <tr>
+                <td><%= entry.name %></td>
+                <td><%= entry.rollno %></td>
+                <td><%= entry.dateOfExam %></td>
+                <td><%= entry.m1 %></td>
+                <td><%= entry.m2 %></td>
+                <td><%= entry.m3 %></td>
+            </tr>
+            <% } %>
+        <% }); %>
+    </table>
+</body>
+</html>

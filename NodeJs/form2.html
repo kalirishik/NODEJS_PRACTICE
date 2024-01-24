@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form action="/validate" method="post">
+            Name: <input type="text" name="name"><br><br>
+            Email: <input type="email" name="email"><br><br>
+            <input type="checkbox" name="subscribe" value="true">Subscribe to the Newsletter <br><br>
+            Format of the Email: <br>
+            <input type="radio" name="format" value="HTML">HTML<br>
+            <input type="radio" name="format" value="Plain Text">Plain Text<br><br>
+            Types of subscription you want:<br>
+            <select name="typesOfSubscription">
+                <option value="standard">standard</option>
+                <option value="premium">premium</option>
+            </select><br>
+            Comments to the Editor: <br>
+            <textarea name="comments"></textarea>
+            <br><br>
+            <input type="submit" value="submit">
+        </form>
+    </center>
+</body>
+</html>
